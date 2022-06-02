@@ -1,0 +1,9 @@
+{
+	"name": "cosmosdbtosqlArchive",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2b15efbc-47f3-4b56-8175-acf6a573ff87",
+		"tenantId": "04eca944-6c51-44b3-968f-d0b53acd3878"
+	}
+}
