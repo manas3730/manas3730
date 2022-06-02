@@ -1,0 +1,31 @@
+{
+	"name": "SourceDataset_9jd",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CosmosDb1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "CosmosDbSqlApiCollection",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"userId": {
+					"type": "string"
+				},
+				"jobTitleName": {
+					"type": "string"
+				},
+				"firstName": {
+					"type": "string"
+				},
+				"lastName": {
+					"type": "string"
+				}
+			}
+		},
+		"typeProperties": {
+			"collectionName": "EmployeeRecords"
+		}
+	}
+}
