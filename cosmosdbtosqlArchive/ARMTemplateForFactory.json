@@ -57,9 +57,49 @@
 								"preferredRegions": []
 							},
 							"sink": {
-								"type": "AzureSqlSink"
+								"type": "AzureSqlSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false,
+								"disableMetricsCollection": false
 							},
-							"enableStaging": false
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "$['userId']"
+										},
+										"sink": {
+											"name": "UserId"
+										}
+									},
+									{
+										"source": {
+											"path": "$['jobTitleName']"
+										},
+										"sink": {
+											"name": "JobTitle"
+										}
+									},
+									{
+										"source": {
+											"path": "$['firstName']"
+										},
+										"sink": {
+											"name": "FirstName"
+										}
+									},
+									{
+										"source": {
+											"path": "$['lastName']"
+										},
+										"sink": {
+											"name": "LastName"
+										}
+									}
+								]
+							}
 						},
 						"inputs": [
 							{
@@ -99,6 +139,24 @@
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
+				"structure": [
+					{
+						"name": "UserId",
+						"type": "String"
+					},
+					{
+						"name": "JobTitle",
+						"type": "String"
+					},
+					{
+						"name": "FirstName",
+						"type": "String"
+					},
+					{
+						"name": "LastName",
+						"type": "String"
+					}
+				],
 				"typeProperties": {
 					"tableName": "[[dbo].[EmployeeArchive]"
 				}
