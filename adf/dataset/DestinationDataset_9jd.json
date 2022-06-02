@@ -7,6 +7,24 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "UserId",
+				"type": "String"
+			},
+			{
+				"name": "JobTitle",
+				"type": "String"
+			},
+			{
+				"name": "FirstName",
+				"type": "String"
+			},
+			{
+				"name": "LastName",
+				"type": "String"
+			}
+		],
 		"typeProperties": {
 			"tableName": "[dbo].[EmployeeArchive]"
 		}
