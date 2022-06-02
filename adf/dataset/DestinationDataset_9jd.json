@@ -1,0 +1,11 @@
+{
+	"name": "DestinationDataset_9jd",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseArchive",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable"
+	}
+}
